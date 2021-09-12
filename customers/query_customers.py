@@ -3,13 +3,14 @@ import json
 from settings.loader import load_env
 import os
 
-def query_customer_list(server_url, token):
+def query_company_list(server_url, token, role_type):
     headers = {'Authorization': 'Token ' + token}
-    url= server_url + '/api/customers/query_companies_by_type/'
+    url= server_url + '/api/customers/query_companies_with_role/'
     #print(json.dumps(qry, indent=2))
     result = requests.get(url,  headers=headers)
     print(result)
     print(json.dumps(result.json(), indent=2))
+    return result.json()['companies']
 
 def query_own_company(server_url, token):
     headers = {'Authorization': 'Token ' + token}
