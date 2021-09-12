@@ -12,6 +12,7 @@ def run_samples():
     token = os.environ.get("basic_auth_token")
     server_url = os.environ.get("server_url")
     print("Accessing " + str(server_url) + " with auth token " + str(token))
+
     company=query_own_company(server_url, token)
     my_fsp_pk=0
     if company is not None:
@@ -27,7 +28,11 @@ def run_samples():
     extern_asset_id="123342342342342" # WHat ever extern ID to lookup later on
     description="My super asset # 122"
     meter_id="79928329372384"
-    #For testing sample asset registration, uncomment line below
+
+    # The asset is assigned asset_id by server (used to refer to when registering meter readings
+    # Use own extern_asset_id to map to own data as a way of linking to correct asset_id
+
+    # Uncomment to send registration
     #register_asset(server_url, token,extern_asset_id,description,asset_type_pk,my_fsp_pk, grid_comp_pk, meter_id)
 
     #Sample reading registration.
