@@ -7,7 +7,10 @@ def query_company_list(server_url, token, role_type):
     headers = {'Authorization': 'Token ' + token}
     url= server_url + '/api/customers/query_companies_with_role/'
     #print(json.dumps(qry, indent=2))
-    result = requests.get(url,  headers=headers)
+    query= {
+                "role": role_type
+    }
+    result = requests.post(url, json=query, headers=headers)
     print(result)
     print(json.dumps(result.json(), indent=2))
     return result.json()['companies']

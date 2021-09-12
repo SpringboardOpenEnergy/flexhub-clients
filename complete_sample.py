@@ -24,7 +24,7 @@ def run_samples():
     grid_comp_pk=0 if len(dso_list)==0 else dso_list[0]['pk'] #Use first DSO in list as sample grid compnay
     print("Registering asset against grid company " + str(grid_comp_pk))
     asset_type_pk=1 # Demand respones (or pick one from the list above)
-    extern_asset_id="abcdef" # WHat ever extern ID to lookup later on
+    extern_asset_id="123342342342342" # WHat ever extern ID to lookup later on
     description="My super asset # 122"
     meter_id="79928329372384"
     #For testing sample asset registration, uncomment line below
