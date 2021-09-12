@@ -12,7 +12,6 @@ def run_samples():
     token = os.environ.get("basic_auth_token")
     server_url = os.environ.get("server_url")
     print("Accessing " + str(server_url) + " with auth token " + str(token))
-
     company=query_own_company(server_url, token)
     my_fsp_pk=0
     if company is not None:
