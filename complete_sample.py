@@ -1,4 +1,4 @@
-import requests
+
 import json
 from settings.loader import load_env
 import os
