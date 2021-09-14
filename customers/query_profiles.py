@@ -10,6 +10,8 @@ def query_current_profile(server_url, token):
     result = requests.get(url,  headers=headers)
     print(result)
     print(json.dumps(result.json(), indent=2))
+    if len(result.json())==0:
+        return None
     return result.json()  # For simplicity in sample, select first company - most common case is only 1
 
 if __name__ == '__main__':
