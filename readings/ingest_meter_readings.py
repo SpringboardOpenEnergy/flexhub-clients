@@ -6,13 +6,15 @@ sample_readings=[{"val": 44, "time": "2021-02-01T21:00:00Z"},
 {"val": 45, "time": "2021-02-22:00:00Z"},
 {"val": 44, "time": "2021-02-23:00:00Z"}
              ]
+
+
 def ingest_readings_for_asset(server_url, token, asset_id, readings=sample_readings):
     headers = {'Authorization': 'Token ' + token}
     url= server_url + '/api/assetdata/ingest_readings_utcformat/'
     payload={
         'asset_id':asset_id,
-        'first':sample_readings[0]['time'],
-        'last': sample_readings[len(sample_readings)-1]['time'],
+        'first':readings[0]['time'],
+        'last': readings[len(readings)-1]['time'],
         'readings':readings
     }
 
