@@ -6,7 +6,7 @@ from assets.query_assets import query_assets
 from assets.query_asset_types import query_asset_types
 from customers.query_customers import query_own_company, query_company_list
 from assets.asset_registration import register_asset
-from readings.ingest_meter_readings import ingest_readings_for_asset
+from readings.ingest_assetmeter_readings import ingest_assetlevel_readings
 def run_samples():
     load_env()
     token = os.environ.get("basic_auth_token")
@@ -38,7 +38,7 @@ def run_samples():
     if len(assetlist)>0:
         firstasset=assetlist[0]
         print("Ingesting sample readings for " + firstasset['asset_id'])
-        ingest_readings_for_asset(server_url, token, firstasset['asset_id'])
+        ingest_assetlevel_readings(server_url, token, firstasset['asset_id'])
 if __name__ == '__main__':
     run_samples()
 

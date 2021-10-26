@@ -7,8 +7,9 @@ sample_readings=[{"val": 44, "time": "2021-02-01T21:00:00Z"},
 {"val": 44, "time": "2021-02-23:00:00Z"}
              ]
 
-
-def ingest_readings_for_asset(server_url, token, asset_id, readings=sample_readings):
+# Use this API for registering meter readings directly on assets
+# In particular if there are multiple assets behind the meter, this is the API that should be used
+def ingest_assetlevel_readings(server_url, token, asset_id, readings=sample_readings):
     headers = {'Authorization': 'Token ' + token}
     url= server_url + '/api/assetdata/ingest_readings_utcformat/'
     payload={
