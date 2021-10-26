@@ -10,7 +10,7 @@ from readings.ingest_assetmeter_readings import ingest_assetlevel_readings
 def run_samples():
     load_env()
     token = os.environ.get("basic_auth_token")
-    server_url = os.environ.get("server_url")
+    server_url = os.environ.get("server_url")  # http://test.flexhub.no for test system
     print("Accessing " + str(server_url) + " with auth token " + str(token))
     company=query_own_company(server_url, token)
     my_fsp_pk=0
