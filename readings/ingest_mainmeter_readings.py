@@ -23,6 +23,7 @@ sample_readings={
 
 
 # Format used in Sthlmflex for main smart meter readings.
+# Readings are attached to the one single asset behind the meter on the server side.
 def ingest_mainmeter_readings(server_url, token, readings=sample_readings):
     headers = {'Authorization': 'Token ' + token}
     url= server_url + '/api/assetdata/ingest_readings_sthlmflex/'
