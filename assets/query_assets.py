@@ -6,7 +6,6 @@ import os
 def query_assets(server_url, token):
     headers = {'Authorization': 'Token ' + token}
     url= server_url + '/api/assets/asset/'
-    #print(json.dumps(qry, indent=2))
     result = requests.get(url,  headers=headers)
     print(result)
     print(json.dumps(result.json(), indent=2))
