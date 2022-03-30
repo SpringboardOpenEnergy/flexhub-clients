@@ -1,7 +1,7 @@
-import requests
 import json
-from settings.loader import load_env
-import os
+
+import requests
+
 sample_readings=[{"val": 44, "time": "2021-02-01T21:00:00Z"},
 {"val": 45, "time": "2021-02-22:00:00Z"},
 {"val": 44, "time": "2021-02-23:00:00Z"}

@@ -1,9 +1,13 @@
-import requests
 import json
-from settings.loader import load_env
 import os
-from datetime import datetime, timedelta, date
-import pytz, random
+from datetime import datetime, timedelta
+
+import pytz
+import random
+import requests
+
+from settings.loader import load_env
+
 
 # Same as other sample on main meter, just generates a larger number of random values
 def generate_readings():

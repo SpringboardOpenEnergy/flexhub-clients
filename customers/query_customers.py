@@ -1,7 +1,10 @@
-import requests
 import json
-from settings.loader import load_env
 import os
+
+import requests
+
+from settings.loader import load_env
+
 
 def query_company_list(server_url, token, role_type):
     headers = {'Authorization': 'Token ' + token}

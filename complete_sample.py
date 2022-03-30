@@ -1,12 +1,10 @@
-
-import json
-from settings.loader import load_env
 import os
 from assets.query_assets import query_assets
-from assets.query_asset_types import query_asset_types
 from customers.query_customers import query_own_company, query_company_list
-from assets.asset_registration import register_asset
 from readings.ingest_assetmeter_readings import ingest_assetlevel_readings
+from settings.loader import load_env
+
+
 def run_samples():
     load_env()
     token = os.environ.get("basic_auth_token")

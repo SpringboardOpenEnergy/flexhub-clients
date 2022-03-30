@@ -1,8 +1,11 @@
-import requests
 import json
-from settings.loader import load_env
 import os
+
+import requests
+
 from customers.query_customers import query_own_company, query_company_list
+from settings.loader import load_env
+
 
 def register_asset(server_url, token,
                    extern_id,

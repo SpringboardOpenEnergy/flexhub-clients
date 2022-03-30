@@ -1,7 +1,10 @@
-import requests
 import json
-from settings.loader import load_env
 import os
+
+import requests
+
+from settings.loader import load_env
+
 
 def exec_healthcheck(server_url):
     url= server_url + '/api/healthcheck/'

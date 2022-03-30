@@ -1,7 +1,6 @@
-import requests
 import json
-from settings.loader import load_env
-import os
+
+import requests
 
 
 def retrieve_readings_for_asset(server_url, token, asset_id):
